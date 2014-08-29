@@ -134,7 +134,9 @@ Template Name: Contact
 		map3.mapTypes.set('map_style', styledMap);
 		map3.setMapTypeId('map_style');  			   
 	    
+	    
 	}
+	google.maps.event.addDomListener(window, 'resize', initialize);
 	google.maps.event.addDomListener(window, 'load', initialize);
 	</script>	
 	<div id="map-canvas-1" class="show-for-large-up"></div>	
@@ -142,7 +144,7 @@ Template Name: Contact
 	<div id="contact-form" class="show-for-medium-up">
 		<h1>Contact Us</h1>
 		<?php echo do_shortcode('[contact-form-7 id="117" title="Contact Form"]'); ?>
-		<div class="address large-12 left columns"><h2>Or pop in to see us at: <br>1 Bowman Drive, Suite 175<br>Fredericksburg, VA 22408<br>540.368.1776</h2></div>
+		<div class="address large-12 left columns">Or pop in to see us at: <br><h2>1 Bowman Drive, Suite 175<br>Fredericksburg, VA 22408<br>540.368.1776</h2></div>
 	</div>	
 	<div class="row">
 		<div id="map-canvas-3" class="show-for-small-only small-12 columns"></div>		

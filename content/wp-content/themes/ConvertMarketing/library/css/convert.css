@@ -1270,7 +1270,8 @@ body.page-template-about-php #careers {
   top: 0;
   height: 100%;
   right: 0;
-  color: #fff; }
+  color: #fff;
+  padding-top: 120px; }
   .page-template-contact-php #contact-form h1 {
     font-weight: 100;
     color: #fff;
@@ -1372,10 +1373,13 @@ body.page-template-about-php #careers {
     margin: -9999px;
     border: none; }
   .page-template-contact-php #contact-form .address {
-    color: #fff; }
+    color: #fff;
+    padding: 75px 50px 0 50px; }
     .page-template-contact-php #contact-form .address h2 {
       color: #fff;
       font-weight: 100; }
+  .page-template-contact-php #contact-form .wpcf7-form {
+    padding: 0 50px; }
 .page-template-contact-php #contact-form-3 {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;

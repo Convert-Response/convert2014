@@ -1595,6 +1595,7 @@ body.page-template-about-php {
 		height: 100%;
 		right: 0;
 		color: #fff;
+		padding-top:120px;
 		h1 {
 			font-weight:100;
 			color:#fff;
@@ -1724,10 +1725,14 @@ body.page-template-about-php {
 		}	
 		.address {
 			color:#fff;
+			padding:75px 50px 0 50px;
 			h2 {
 				color:#fff;
 				font-weight:100;
 			}
+		}
+		.wpcf7-form {
+			padding:0 50px;
 		}
 	}	
 	#contact-form-3 {
