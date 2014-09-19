@@ -16,6 +16,8 @@ single-bookmarks.php
 <?php get_header(); ?>
 			<div id="case-study-top" class="section" style="background-image:url(<?php echo the_field('large_top_staff_image'); ?>)">
 				<div class="next-case"><?php c2c_previous_or_loop_post_link('%link'); ?><?php c2c_next_or_loop_post_link('%link'); ?></div>
+
+
 			</div>	
 			<div id="content">
 

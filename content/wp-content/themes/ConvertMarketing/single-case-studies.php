@@ -58,42 +58,56 @@ single-bookmarks.php
 				</div> <!-- end #inner-content -->
     
 			</div> <!-- end #case-content -->
-			<?php $takeimg = get_field('takeaway_bg_image');
-			
-			if($takeimg) { ?>
-				<div id="takeaways" style="background:url(<?php echo get_field('takeaway_bg_image');?>);">
-			<?php } else { ?>
-				<div id="takeaways" style="background-color:<?php echo the_field('takeaway_bg_color');?>;">				
-			<?php } ?>
+			<div id="takeaways" style="background-color:<?php echo the_field('takeaway_bg_color');?>;">				
 				<div class="row">
 					<div class="large-12 columns">
 						<h3 class="project-snap-title" style="color:<?php echo the_field('takeaway_title_color');?>;">PROJECT SNAPSHOT</h3>
 						<div class="sub-line"></div>
-							<?php if( have_rows('snapshot_icons') ): ?>
+							<?php
+
+							 if( get_field('snapshot_icons') ): ?>
 							
 							<ul class="row">
 							
-								<?php while( have_rows('snapshot_icons') ): the_row(); 
+								<?php 
+								$i = 0;
+								$x = 0;
+								$y = 0;
+								while( has_sub_field('snapshot_icons')):
 								
 								// vars
-								$icon = get_field_object('icon');
-								$icon_title = get_sub_field('icon_title');
+								$icon_number = get_sub_field('icon_number');
+								$icon_start = get_sub_field('start_count_number');	
+								$icon_end = get_sub_field('icon_number');															
 								$icon_copy = get_sub_field('icon_copy');
-								
-								$field = get_field_object('icon');
-								$value = get_field('icon');
-								$label = $field['choices'][ $value ];
-								
-								?>
-								
-									<li class="columns">
-									
-										<?php 
-										
-										echo $label;
-											
-										?>
-										<?php echo $content; ?>
+								$icon_psym = get_sub_field('proceeding_symbol');
+								$icon_fsym = get_sub_field('following_symbol');								
+							    $icon = get_sub_field('icon'); 
+							    
+							    ?>
+							    	<li class="large-4 columns">
+										<?php if( $icon == 'clicks' ){ ?>
+												<i class="icon icon-c_clicks"></i>
+											<?php } else if( $icon  == 'opens' ){ ?>
+												<i class="icon icon-c_opens"></i>
+											<?php } else if( $icon  == 'conversions' ){ ?>
+												<i class="icon icon-c_conversions"></i>
+											<?php } else if( $icon  == 'signatures' ){ ?>
+												<i class="icon icon-c_signatures"></i>
+											<?php } else if( $icon  == 'recovery' ){ ?>
+												<i class="icon icon-c_recovery"></i>
+											<?php } else if( $icon  == 'donor' ){ ?>
+												<i class="icon icon-c_donor"></i>
+											<?php } else if( $icon  == 'lead' ){ ?>
+												<i class="icon icon-c_lead"></i>							
+											<?php } else if( $icon  == 'none' ){ ?>
+												
+										<?php } ?>
+																		
+										<div class="icon-number"><?php echo $icon_psym; ?><span id="icon-digit-<?php echo $i++; ?>"></span><?php echo $icon_fsym; ?></div>
+										<div style="display:none;" id="icon-start-<?php echo $x++; ?>"><?php echo $icon_start; ?></div>		
+										<div style="display:none;" id="icon-end-<?php echo $y++; ?>"><?php echo $icon_end; ?></div>
+										<div class="icon-copy"><?php echo $icon_copy; ?></div>
 									
 									</li>
 								
@@ -105,6 +119,26 @@ single-bookmarks.php
 					</div>									
 				</div>	
 			</div>
+			<script>
+				jQuery(document).ready(function($) {
+				
+					jQuery('.single-case-studies #main').waypoint(function() {
+						jQuery('.icon').fadeIn(900);
+						var number1 = $('#icon-start-0').text();
+						var number2 = $('#icon-start-1').text();		
+						var number3 = $('#icon-start-2').text();
+						var end1 = $('#icon-end-0').text();
+						var end2 = $('#icon-end-1').text();		
+						var end3 = $('#icon-end-2').text();														
+						var numAnim1 = new countUp("icon-digit-0", number1, end1, 0, 3);
+					    numAnim1.start();
+						var numAnim2 = new countUp("icon-digit-1", number2, end2, 0, 3);
+					    numAnim2.start();	
+						var numAnim3 = new countUp("icon-digit-2", number3, end3, 0, 3);
+					    numAnim3.start();						
+					}, { offset: 700 });																		    				    
+			    });							
+			</script>
 			<div id="bottom-success">
 				<div class="row">
 					<div class="large-12 columns">

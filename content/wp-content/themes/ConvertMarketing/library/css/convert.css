@@ -54,6 +54,9 @@ h1, h2, h3, h4, h5 {
 .icon-c_lead:before {
   content: "\e60a"; }
 
+.fi-social-linkedin {
+  /* 	color:#0085AE; */ }
+
 /* CONVERT SLIDE DOWN */
 #contact-div {
   background: rgba(255, 255, 255, 0.85);
@@ -108,12 +111,13 @@ h1, h2, h3, h4, h5 {
     border: 2px solid #A3A8BB;
     margin-top: -16px;
     width: 100%;
-    background: url(../images/submit-bg.png);
+    color: #fff;
+    background: #008ba3;
     -webkit-transition: all .5s ease;
     -moz-transition: all .5s ease;
     transition: all .5s ease; }
   #contact-div input[type=submit]:hover {
-    opacity: .7; }
+    background: #29d2ef; }
   #contact-div input.wpcf7-not-valid {
     border-bottom: 2px solid red; }
   #contact-div .wpcf7-not-valid-tip {
@@ -607,7 +611,7 @@ h1, h2, h3, h4, h5 {
     font-size: 2.3rem;
     text-transform: uppercase;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 100px;
     letter-spacing: .1rem;
     transition: .5s all; }
   #home-contact .logo-contact:hover {
@@ -731,7 +735,7 @@ body.page-template-about-php #about-text {
   z-index: 9;
   padding: 120px 0; }
 body.page-template-about-php #our-staff {
-  padding: 50px 0;
+  padding: 80px 0;
   position: relative;
   z-index: 9;
   background: #fff; }
@@ -740,7 +744,10 @@ body.page-template-about-php #our-staff {
     border-bottom: 1px solid #ddd;
     margin-bottom: 50px;
     padding-bottom: 20px;
-    color: #888; }
+    color: #4d4d4d; }
+  body.page-template-about-php #our-staff h3 {
+    text-align: center;
+    color: #888888; }
   body.page-template-about-php #our-staff .staff-wrap {
     width: 219px;
     height: 219px;
@@ -821,8 +828,8 @@ body.page-template-about-php #our-staff {
   body.page-template-about-php #our-staff .staff-container {
     margin-bottom: 80px; }
 body.page-template-about-php #careers {
-  background: #efefef;
-  padding: 40px 0 80px 0;
+  background: #008ba3;
+  padding: 80px 0;
   position: relative;
   z-index: 4; }
   body.page-template-about-php #careers h1 {
@@ -830,38 +837,46 @@ body.page-template-about-php #careers {
     border-bottom: 1px solid #ddd;
     margin-bottom: 50px;
     padding-bottom: 20px;
-    color: #888; }
+    color: #fff; }
+  body.page-template-about-php #careers h3 {
+    text-align: center;
+    color: #d6dddd; }
   body.page-template-about-php #careers .career-teaser {
     padding: 10px 0; }
     body.page-template-about-php #careers .career-teaser .career-body {
       line-height: 2rem; }
   body.page-template-about-php #careers .career-post {
     padding-bottom: 40px; }
+    body.page-template-about-php #careers .career-post h2 {
+      color: #fff; }
     body.page-template-about-php #careers .career-post a {
-      color: #EF8229;
-      transition: .3s all;
-      margin-left: 11px; }
+      color: #29d2ef;
+      transition: .3s all; }
       body.page-template-about-php #careers .career-post a i {
         font-size: 2.2rem;
-        color: #EF8229;
+        color: #29d2ef;
         position: relative;
         top: 8px;
         left: 7px;
         transition: .3s all; }
     body.page-template-about-php #careers .career-post a:hover {
-      color: #db7826; }
+      color: #28b5ce; }
       body.page-template-about-php #careers .career-post a:hover i {
         font-size: 2.2rem;
-        color: #db7826;
+        color: #28b5ce;
         position: relative;
         top: 8px;
         left: 15px; }
   body.page-template-about-php #careers .career-text {
-    line-height: 1.7rem; }
+    line-height: 1.7rem;
+    color: #d6dddd; }
 
 /* SINGLE STAFF */
 .single-staff #content {
   background: #fff; }
+  .single-staff #content a:hover, .single-staff #content a:focus {
+    background: none !important;
+    color: #fff; }
 .single-staff #main {
   margin-top: 50px;
   margin-bottom: 80px; }
@@ -903,7 +918,7 @@ body.page-template-about-php #careers {
   text-align: center;
   margin: 10px 0; }
   .single-staff .social-links .social {
-    width: 35px;
+    width: 42px;
     height: 35px;
     position: relative;
     margin: 10px auto;
@@ -911,20 +926,28 @@ body.page-template-about-php #careers {
     margin: 0 10px;
     float: right; }
     .single-staff .social-links .social i {
-      font-size: 3rem; }
-    .single-staff .social-links .social a {
-      color: #666;
+      font-size: 3rem;
       transition: .5s all; }
-    .single-staff .social-links .social a:hover {
-      color: #4171b3 !important;
-      background: none !important; }
+    .single-staff .social-links .social i:hover {
+      color: #EF8229 !important; }
+    .single-staff .social-links .social .fi-social-linkedin {
+      color: #0085ae !important; }
+    .single-staff .social-links .social .fi-social-twitter {
+      color: #55ACEE !important; }
+    .single-staff .social-links .social .fi-social-github {
+      color: #000000 !important; }
+    .single-staff .social-links .social .fi-social-facebook {
+      color: #3b5998 !important; }
+    .single-staff .social-links .social .fi-social-dribbble {
+      color: #DC4D84 !important; }
+    .single-staff .social-links .social .fi-social-behance {
+      color: #0C7BFB !important; }
 .single-staff #staff-questions {
   background: #ddd;
   width: 100%;
   padding: 35px 0; }
 .single-staff .slide {
   list-style-type: none;
-  border-right: 1px dotted #fff;
   height: 80px; }
 .single-staff .slide:last-of-type {
   border-right: none; }
@@ -1235,8 +1258,31 @@ body.page-template-about-php #careers {
   margin: 0 0 15px 0; }
 
 #takeaways {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   background-size: cover; }
+  #takeaways li {
+    text-align: center;
+    list-style: none;
+    list-style-type: none;
+    padding-top: 50px;
+    padding-bottom: 70px;
+    font-family: "futura-pt",sans-serif !important; }
+    #takeaways li .icon {
+      font-size: 6.5rem;
+      color: #fff;
+      display: none; }
+    #takeaways li .icon-number {
+      font-family: "futura-pt",sans-serif !important;
+      color: #fff;
+      font-size: 4.5rem;
+      font-weight: bold;
+      padding-top: 40px; }
+    #takeaways li .icon-copy {
+      font-family: "futura-pt",sans-serif !important;
+      color: #fff;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding-top: 6px; }
 
 #bottom-success {
   padding: 50px 0;
@@ -1710,8 +1756,8 @@ footer {
   footer .footer_logo {
     background: url(../images/logo_footer.png);
     width: 100%;
-    height: 100px;
-    background-size: 36%;
+    height: 160px;
+    background-size: 52%;
     background-repeat: no-repeat;
     background-position: left center;
     transition: .5s all; }
@@ -1744,6 +1790,29 @@ footer {
     text-align: right;
     border-left: 1px solid #888;
     margin-bottom: 20px; }
+    footer .address h3 {
+      color: #888;
+      text-transform: uppercase; }
+  footer .connect {
+    color: #fff;
+    font-size: 1.05rem;
+    line-height: 1.65rem;
+    text-align: left;
+    margin-bottom: 20px; }
+    footer .connect h3 {
+      color: #888;
+      text-transform: uppercase; }
+    footer .connect a {
+      color: #fff; }
+    footer .connect i {
+      margin-right: 15px;
+      font-size: 1.6rem;
+      position: relative;
+      top: 3px;
+      color: #888;
+      transition: .5s all; }
+    footer .connect a:hover i {
+      color: #EF8229; }
   footer .copyright-wrap {
     background: #3c3c3c;
     color: #969696; }
@@ -1769,11 +1838,8 @@ footer {
     font-size: 1.3rem; }
 
   #bio-text .questions {
-    padding-top: 35px;
-    padding-left: 15px;
-    border-left: none;
-    border-top: 1px solid #ddd;
-    margin-top: 35px; }
+    background: #ddd;
+    padding: 40px; }
 
   #container {
     margin-top: 0px; }
@@ -1806,7 +1872,7 @@ footer {
     padding: 25px 0 0 0; }
     footer .address {
       color: #fff;
-      font-size: 1.55rem;
+      font-size: 1.05rem;
       line-height: 2rem;
       text-align: center;
       border-left: none;
@@ -1817,7 +1883,28 @@ footer {
       height: 100px;
       background-size: 100%;
       transition: .5s all;
-      margin: 0 auto; } }
+      margin: 0 auto; }
+    footer .connect {
+      color: #fff;
+      font-size: 1.05rem;
+      line-height: 1.65rem;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 40px; }
+      footer .connect h3 {
+        color: #888;
+        text-transform: uppercase; }
+      footer .connect a {
+        color: #fff; }
+      footer .connect i {
+        margin-right: 15px;
+        font-size: 1.6rem;
+        position: relative;
+        top: 3px;
+        color: #888;
+        transition: .5s all; }
+      footer .connect a:hover i {
+        color: #EF8229; } }
 /* smartphones, Android phones, landscape iPhone */
 @media (min-width: 480px) and (max-width: 650px) {
   #top-home {
@@ -1832,11 +1919,8 @@ footer {
       margin-top: 20px; }
 
   #bio-text .questions {
-    padding-top: 35px;
-    padding-left: 15px;
-    border-left: none;
-    border-top: 1px solid #ddd;
-    margin-top: 35px; }
+    background: #ddd;
+    padding: 40px; }
 
   #inner-content-sm h3 {
     color: #fff;
@@ -1984,11 +2068,8 @@ footer {
       padding: 90px 0; }
 
   #bio-text .questions {
-    padding-top: 35px;
-    padding-left: 15px;
-    border-left: none;
-    border-top: 1px solid #ddd;
-    margin-top: 35px; } }
+    background: #ddd;
+    padding: 40px; } }
 /* big landscape tablets, laptops, and desktops */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   #top-home {
@@ -2036,9 +2117,8 @@ footer {
       padding: 90px 0; }
 
   #bio-text .questions {
-    padding-top: 21px;
-    padding-left: 40px;
-    border-left: 1px solid #ddd; } }
+    background: #ddd;
+    padding: 40px; } }
 /* MacBook Airs, Small Laptops, 1400x900 Resolution */
 @media only screen and (min-width: 1200px) and (max-width: 1441px) {
   #top-home {
@@ -2059,9 +2139,8 @@ footer {
       padding: 90px 0; }
 
   #bio-text .questions {
-    padding-top: 21px;
-    padding-left: 40px;
-    border-left: 1px solid #ddd; } }
+    background: #ddd;
+    padding: 40px; } }
 @media only screen and (min-width: 1442px) and (max-width: 9900px) {
   #top-home {
     height: 1100px; }
@@ -2081,6 +2160,5 @@ footer {
       padding: 90px 0; }
 
   #bio-text .questions {
-    padding-top: 21px;
-    padding-left: 40px;
-    border-left: 1px solid #ddd; } }
+    background: #ddd;
+    padding: 40px; } }

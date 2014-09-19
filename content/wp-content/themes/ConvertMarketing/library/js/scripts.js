@@ -134,7 +134,7 @@ $(function() {
 		$(function() {
 		    var BV = new $.BigVideo();
 		    BV.init();
-		    BV.show('/wp-content/themes/ConvertMarketing/library/videos/bg2.mp4',{ambient:true});
+		    BV.show('/wp-content/themes/ConvertMarketing/library/videos/about-page.mp4',{ambient:true});
 		});	
 		
 	}	
@@ -159,8 +159,6 @@ $(function() {
 		$('.logo').addClass('smlogo animated bounceInLeft');
 	}, 3000);
 */
-
-
 
 
 // Slide down homepage contact	

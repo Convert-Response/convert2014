@@ -222,10 +222,27 @@ function joints_comments($comment, $args, $depth) {
 SITE FUNCTIONS
 *********************/
 
+
+function load_custom_wp_admin_style() {
+    wp_register_style('icon-fonts', get_template_directory_uri() . '/library/fonts/icon-fonts.css');
+    wp_enqueue_style( 'icon-fonts' );
+}
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+/*
+if ( function_exists( 'add_theme_support' ) ) {
+	add_theme_support( 'staff-thumbnails' );
+	set_post_thumbnail_size( 10, 10 );
+}
+*/
+
+add_theme_support( 'staff-thumbnails' );
+add_image_size('staff-thumbnails', 10, 10, true);
+
 function footer_contact() {
 	echo '<div id="footer-contact">';
 		echo '<div class="row">';
-				 echo do_shortcode('[contact-form-7 id="117" title="Contact Form"]');
+				 echo do_shortcode('[contact-form-7 id="463" title="Footer Contact Form"]');
 		echo '</div>';		
 	echo '</div>';	
 }

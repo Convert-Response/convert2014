@@ -15,7 +15,8 @@ Template Name: About
 </div>				
 <div id="our-staff" name="our-staff">
 	<div class="row">
-		<h1 class="tk-futura-pt large-12 columns">OUR STAFF</h1>		
+			<h3 class="large-12 large-offset-0 small-10 small-offset-1 columns tk-futura-pt">WONDERING WHO'S BEHIND THE MAGIC?</h3>	
+			<h1 class="large-12 columns tk-futura-pt">MEET THE FACES OF CONVERT</h1>		
 			<?php 
 			 
 			$posts = get_field('staff_order');
@@ -25,7 +26,7 @@ Template Name: About
 			    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
 			        <?php setup_postdata($post); ?>
 			<div class="large-3 medium-4 small-12 columns left staff-container">
-					<div class="staff-wrap" style="background-image:url(<?php if ( has_post_thumbnail() ) { echo wp_get_attachment_url( get_post_thumbnail_id() ); } ?>);">
+					<div class="staff-wrap" style="background-image:url(<?php if ( has_post_thumbnail() ) { echo wp_get_attachment_url( get_post_thumbnail_id($post->ID, 'thumbnail')); } ?>);">
 					<a href="<?php the_permalink(); ?>" class="profile-link"></a>
 						<div class="staff-fill"></div>
 						<div class="staff-member">
@@ -78,8 +79,9 @@ Template Name: About
 </div> <!-- end #top-services -->	
 <div id="careers" name="careers">
 	<div class="row">
-		<h1 class="large-12 columns tk-futura-pt">CAREERS</h1>
-		<?php if( have_rows('career_post') ): ?>
+	<h3 class="large-12 large-offset-0 small-10 small-offset-1 columns tk-futura-pt">LOOKING FOR A CAREER IN MARKETING?</h3>	
+	<h1 class="large-12 columns tk-futura-pt">YOU'RE IN LUCK. WE'RE HIRING!</h1>
+	<?php if( have_rows('career_post') ): ?>
 		
 			<?php while( have_rows('career_post') ): the_row(); 
 		
@@ -103,8 +105,8 @@ Template Name: About
 						
 					?>
 		
-				    <div class="career-text"><?php echo $content; ?><a class="career-arrow" href="/job-application?job=<?php echo $stringURL; ?>&description=<?php echo $stringText; ?>">Apply for this job <i class="fi-arrow-right medium"></i></a></div>
-		
+				    <div class="career-text"><?php echo $content; ?></div>
+					<a class="career-arrow" href="/job-application?job=<?php echo $stringURL; ?>&description=<?php echo $stringText; ?>">Apply for this job <i class="fi-arrow-right medium"></i></a>
 				</div>
 		
 			<?php endwhile; ?>
@@ -112,7 +114,7 @@ Template Name: About
 		<?php else: ?>	
 				<div class="large-12 columns">
 		
-						<h2>There are currently now job postings. Please check back soon!</h2>
+						<h2>There are currently no job postings. Please check back soon!</h2>
 				</div>			
 		<?php endif; ?>
 	</div>

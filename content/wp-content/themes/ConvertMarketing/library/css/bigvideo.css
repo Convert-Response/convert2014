@@ -46,7 +46,7 @@ left: 0;
 
 
 
-@media (min-width:480px) { 
+@media (min-width:480px) and (max-width : 599px){ 
 	#big-video-vid,#big-video-image{
 		position: absolute;
 		width: 2420px !important;
@@ -54,17 +54,32 @@ left: 0;
 		top: -400px !important;
 		height: 1780px !important;
 	}
+	
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image{
+		position: absolute;
+		width: 100% !important;
+		display: none;
+		top: -400px !important;
+		height: 1780px !important;
+	}
 }
 
-@media (min-width:600px) {
+@media (min-width:600px) and (max-width : 650px){
 	#big-video-vid,#big-video-image{
 		width: 2420px;
 		top: -400px;
 		height: 1780px;
 	}
+
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		width: 2420px;
+		top: -400px;
+		height: 1780px;	
+	}
+	
 }
 
-@media only screen and (min-width:651px) and (max-width : 901px) and (orientation : portrait)
+@media (min-width:651px) and (max-width : 901px){
 	#big-video-vid,#big-video-image{
 		position: absolute;
 		width: 900px !important;
@@ -73,9 +88,18 @@ left: 0;
 		left: -630px !important;
 		height: 1780px !important;
 	}
+	
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		position: absolute;
+		width: 100% !important;
+		display: block;
+		top: -392px !important;
+		left: 0;
+		height: 1780px !important;	
+	}	
 }
 
-@media only screen and (min-device-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+@media (min-width : 768px) and (max-width : 1024px){
 	#big-video-vid,#big-video-image{
 		position: absolute;
 		width: 1100px !important;
@@ -83,21 +107,17 @@ left: 0;
 		top: -204px !important;
 		height: 1780px !important;
 	}
-}
-
-/* MacBook Airs, Small Laptops, 1400x900 Resolution */
-
-@media only screen and (max-width: 1441px) {
-	#big-video-vid,#big-video-image{
+	
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
 		position: absolute;
-		width: 1500px !important;
+		width: 1100px !important;
 		display: block;
-		top: -470px !important;
-		height: 1780px !important;
-	}	
+		top: -204px !important;
+		height: 1780px !important;	
+	}
 }
 
-@media only screen and (min-width : 1024px) and (max-width:1281px) { 
+@media (min-width : 1024px) and (max-width:1281px) { 
 	#big-video-vid,#big-video-image{
 		position: absolute;
 		width: 2420px !important;
@@ -105,4 +125,60 @@ left: 0;
 		top: -400px !important;
 		height: 1780px !important;
 	}
+	
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		position: absolute;
+		width: 1900px !important;
+		display: block;
+		top: -467px !important;
+		height: 1780px !important;
+		left: -354px !important;
+	}	
+}
+
+/* MacBook Airs, Small Laptops, 1400x900 Resolution */
+
+@media (min-width : 1282px) and (max-width: 1441px) {
+	#big-video-vid,#big-video-image{
+		position: absolute;
+		width: 1500px !important;
+		display: block;
+		top: -470px !important;
+		height: 1780px !important;
+	}	
+	
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		position: absolute;
+		width: 1500px !important;
+		display: block;
+		top: -535px !important;
+		height: 1780px !important;	
+		left: -44px !important;
+	}	
+	
+}
+
+@media (min-width : 1442px) and (max-width: 1900px) {
+
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		position: absolute;
+		width: 1900px !important;
+		display: block;
+		top: -467px !important;
+		height: 1780px !important;	
+	}
+
+}
+
+@media (min-width : 1901px) and (max-width: 2500px) {
+
+	.page-template-about-php #big-video-vid, .page-template-about-php #big-video-image {
+		position: absolute;
+		min-width: 1900px !important;
+		max-width: 2500px;
+		display: block;
+		top: -468px !important;
+		height: 1780px !important;	
+	}
+
 }

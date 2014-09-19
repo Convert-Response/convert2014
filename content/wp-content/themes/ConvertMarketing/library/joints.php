@@ -145,6 +145,9 @@ function joints_scripts_and_styles() {
     wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/library/js/imagesloaded.pkgd.min.js ', array( 'jquery' ), '', true ); 
     wp_enqueue_script( 'big-video', get_template_directory_uri() . '/library/js/bigvideo.js ', array( 'jquery' ), '', true );     
           
+    // Count Up      
+    wp_enqueue_script( 'countup', get_template_directory_uri() . '/library/js/countUp.js ', array( 'jquery' ), '', true );     
+              
     // register main stylesheet
     wp_enqueue_style( 'joints-stylesheet', get_template_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
@@ -174,6 +177,7 @@ function joints_scripts_and_styles() {
     and your site will load faster.
     */
     wp_enqueue_script( 'joints-js' );
+    wp_enqueue_script( 'countup' );
 
   }
 }
